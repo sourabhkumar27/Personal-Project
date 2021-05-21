@@ -42,8 +42,8 @@ function styles() {
 function scripts() {
   return src('src/scripts/*.js')
   .pipe(sourcemaps.init())
-  //.pipe(eslint())
-  //.pipe(eslint.format())
+  .pipe(eslint())
+  .pipe(eslint.format())
   .pipe(concat('bundle.js'))
   .pipe(uglify())
   .pipe(sourcemaps.write())
