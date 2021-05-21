@@ -8,6 +8,13 @@ const cleanCss = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 //const gulpEslint = require('gulp-eslint');
+const imagemin = require('gulp-imagemin');
+
+function images() {
+  gulp.src('src/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/images'))
+}
 
 function browserSync() {
   return browsersync.init({
