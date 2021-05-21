@@ -34,7 +34,7 @@ body {
     background: green;
   }
   #stop_btn {
-    background: yellow;
+    background: rgb(241, 241, 7);
     display: none;
   }
   #reset_btn {
